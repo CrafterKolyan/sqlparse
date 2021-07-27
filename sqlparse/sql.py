@@ -552,6 +552,11 @@ class Where(TokenList):
         'ORDER BY', 'GROUP BY', 'LIMIT', 'UNION', 'UNION ALL', 'EXCEPT',
         'HAVING', 'RETURNING', 'INTO')
 
+class GroupBy(TokenList):
+    M_OPEN = T.Keyword, 'GROUP BY'
+    M_CLOSE = T.Keyword, (
+        'ORDER BY', 'LIMIT', 'UNION', 'UNION ALL', 'EXCEPT',
+        'HAVING', 'RETURNING', 'INTO')
 
 class Having(TokenList):
     """A HAVING clause."""
